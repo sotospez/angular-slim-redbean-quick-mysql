@@ -42,8 +42,11 @@ for my api Slim enable the config/application.js API Proxying
      }
      }`
 
-and set the dataService path in file services.js 
+set the dataService path in file services.js 
      `return $resource('my_api/api/:data/:id', {}, {});`
+
+set the dataService path in file services.js 
+     `$http.get('/my_api/api').success(function(data){`
 
 #install     
      

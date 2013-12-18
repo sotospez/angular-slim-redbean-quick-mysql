@@ -31,6 +31,8 @@
 </code>
      <p>and set the dataService path in file services.js </p>
      <code>return $resource('my_api/api/:data/:id', {}, {});</code>
+     <p>and set the  path in file rootCtrl.js </p>
+     <code>$http.get('/my_api/api').success(function(data){</code>
      <h4>install</h4>
      <ol>
          <li>git clone https://github.com/sotospez/lineman-angular-camera-barcode.git my-app</li>
