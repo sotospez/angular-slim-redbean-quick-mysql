@@ -1,0 +1,33 @@
+ <div class="panel panel-default">
+ <div class="panel-heading"><h3 class="panel-title">Table {{ title  }} Item ID: {{ model.id }}</h3><hr>
+     <div class="btn-group  pull-right">
+         <button type="button" class="btn btn-primary  dropdown-toggle" ng-click="shownewmenu = !shownewmenu">
+             New field <span class="caret"></span>
+         </button>
+         <ul  ng-class="{ showMenu: shownewmenu ,hideMenu: !shownewmenu}"  class="dropdown-menu" role="menu">
+             <li ng-repeat="fld_type in fld_types">
+             <a ng-click="show_name = !show_name">{{ fld_type }} </a>
+             <div ng-show="show_name"v >
+             <input type="text" class="form-control" ng-model="field_name" placeholder="field name">
+             <button ng-click="createfldtype(fld_type,field_name)" class="btn btn-success" type="button">Add</button>
+             </div>
+             </li>
+
+         </ul>
+     </div>
+
+     <button ng-click="save()" class="btn btn-success" type="button">Save</button>
+     <button ng-click="delete()" class="btn btn-danger" type="button">Delete</button>
+
+ </div>
+ <div class="panel-body">
+    <p>create new field and with save action automatic will be create in mysql database</p>
+     <br>
+
+     <form class="form-horizontal" role="form" name="formmodel" html-form-bind="modelform" ng-model="model">
+
+     </form>
+
+model : {{ model }}
+</div>
+</div>

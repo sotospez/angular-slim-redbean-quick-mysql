@@ -1,0 +1,49 @@
+ <div class="panel panel-default">
+ <div class="panel-heading"><h3 class="panel-title">Hello Welcome</h3></div>
+ <div class="panel-body">
+    <h2>Demo mysql data with angular</h2><br>
+     <p>api RESTful service created with Slim and RedBeanPHP for connection to mysql database </p>
+     <p>is for test for localhost :P the app create automatic tables in mysql database</p>
+     <p>fields in the tables create automatic by selecting type of input in new entry </p>
+     <p>create new table navigate to localhost:8000/#!/{yourtablename} </p>
+     <h2>RESTful service</h2>
+     <p> Install the Slim <a href="http://www.slimframework.com" target="_blank">http://www.slimframework.com/</a> </p>
+     <p>Download the <a href="http://www.redbeanphp.com/" target="_blank">RedBeanPHP</a> copy in to folder of your api.</p>
+     <p>with slim and the api/index.php of files. apiurl like http://localhost/api/ or http://localhost/my_api/api/.</p>
+     <p>create database in your mysql.<br>
+     <p>edit the index.php and fix the mysql connection.<br>
+         <br>//setup the REDBEANPHP<br>
+         <code>R::setup('mysql:host=localhost;dbname=yourdatabase','username','password'); </code></p>
+     <p>after if you navigate to your localhost/api get array of tables of your database.<br>
+
+     <h2>Instructions</h2>
+     <p>app create with lineman and angular</p>
+     <p>for my api Slim enable the config/application.js API Proxying </p>
+
+    <code>server: {
+     apiProxy: {
+     prefix:'/my_api/',
+     enabled: true,
+     host: 'localhost',
+     port: 80
+     }
+     }
+</code>
+     <p>and set the dataService path in file services.js </p>
+     <code>return $resource('my_api/api/:data/:id', {}, {});</code>
+     <h4>install</h4>
+     <ol>
+         <li>git clone https://github.com/sotospez/lineman-angular-camera-barcode.git my-app</li>
+         <li>cd my-app</li>
+         <li>sudo npm install -g lineman</li>
+         <li>npm install</li>
+         <li>open your web browser to localhost:8000</li>
+     </ol>
+
+
+github sotospez<br>
+plus +SotirisPezouvanis
+
+</div>
+  
+</div>
